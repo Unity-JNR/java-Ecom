@@ -3,3 +3,30 @@ body{
     background-size: cover;
     overflow-x: hidden;
 }
+body,html{
+  height: 100%;
+}
+
+#heading{
+    animation: shade 5s linear infinite;
+    text-align: center;
+    font-size: 10vmin;
+    line-height: 1;
+    letter-spacing: 4px;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(90deg, black, red, black);
+    background-size: 70% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+}
+
+@keyframes shade {
+    0% {
+      background-position-x: -500%;
+    }
+    100% {
+      background-position-x: 500%;
+    }
+  }
+
+  
