@@ -10,12 +10,7 @@
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
     }
-    body{
-        background-image: url("https://i.postimg.cc/sXcLD2v4/spider-man-2-adidas-shoes-ign-2023-preorder-order-where-to-buy-1696341802109.png");
-        background-blend-mode: luminosity;
-        background-size: contain;
-       
-      }
+  
   }
 
   .b-example-divider {
@@ -81,8 +76,15 @@
     display: block !important;
   }
 
-  body{
-    background-image: url("https://i.postimg.cc/sXcLD2v4/spider-man-2-adidas-shoes-ign-2023-preorder-order-where-to-buy-1696341802109.png");
-    background-blend-mode: luminosity;
-   
-  }
+    body{
+      background-image: url("https://i.postimg.cc/sXcLD2v4/spider-man-2-adidas-shoes-ign-2023-preorder-order-where-to-buy-1696341802109.png");
+      background-blend-mode: luminosity;
+      background-repeat: no-repeat;
+      background-size: cover;
+    
+    }
+
+
+
+
+  
