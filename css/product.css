@@ -76,19 +76,22 @@
     display: block !important;
   }
 
-    body{
+    main{
       background-image: url("https://i.postimg.cc/sXcLD2v4/spider-man-2-adidas-shoes-ign-2023-preorder-order-where-to-buy-1696341802109.png");
       background-blend-mode: luminosity;
       background-repeat: no-repeat;
       background-size: cover;
       background-color: black;
+
+
       
     
     }
-
-    body, html{
-
+    body{
+      background-color: black;
     }
+
+  
 
 
 
