@@ -82,6 +82,8 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-color: black;
+      background-position: center;
+      background-attachment: fixed;
 
 
       
@@ -90,7 +92,19 @@
     body{
       background-color: black;
     }
+    
+  
 
+   h2 {
+      text-align: center;
+   }
+  
+
+  .shoe-image {
+      width: 50%;
+      height: auto;
+      border-radius: 8px;
+  }
   
 
 
