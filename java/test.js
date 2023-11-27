@@ -60,3 +60,9 @@ document.getElementById('converseLink').addEventListener('click', function() {
 document.getElementById('pumaLink').addEventListener('click', function() {
     showShoes('puma');
 });
+document.getElementById('nikeLink').addEventListener('click', function() {
+    showShoes('nike');
+});
+document.getElementById('jordanLink').addEventListener('click', function() {
+    showShoes('jordan');
+});
