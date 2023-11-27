@@ -75,25 +75,10 @@
   .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
   }
-
-    main{
-      background-image: url("https://i.postimg.cc/sXcLD2v4/spider-man-2-adidas-shoes-ign-2023-preorder-order-where-to-buy-1696341802109.png");
-      background-blend-mode: luminosity;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-color: black;
-      background-position: center;
-      background-attachment: fixed;
-
-
-      
-    
-    }
     body{
       background-color: black;
+      overflow-x: hidden;
     }
-    
-  
 
    h2 {
       text-align: center;
@@ -102,9 +87,19 @@
 
   .shoe-image {
       width: 50%;
-      height: auto;
-      border-radius: 8px;
+      height: 65%;
+      border-radius: 8px ;
+      text-align: center ;
+      margin-left: 10em ;
   }
+#butt{
+  display: block;
+  margin: 0 auto;
+  border: none;
+  color: black;
+  text-align: center;
+  background: linear-gradient(to right, red,blue 85%)
+}
   
 
 
