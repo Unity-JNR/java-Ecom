@@ -63,6 +63,6 @@ document.getElementById('pumaLink').addEventListener('click', function() {
 document.getElementById('nikeLink').addEventListener('click', function() {
     showShoes('nike');
 });
-document.getElementById('jordanLink').addEventListener('click', function() {
-    showShoes('jordan');
+document.getElementById('vanLink').addEventListener('click', function() {
+    showShoes('van');
 });
