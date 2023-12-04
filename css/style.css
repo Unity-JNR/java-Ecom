@@ -1,6 +1,5 @@
 /* index */
-@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Pixelify+Sans&family=Roboto+Serif:opsz,wght@8..144,100&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
 body{
     background-color: black !important; 
     background-size: cover;
@@ -467,7 +466,7 @@ body{
 
 
 
-h1,.subhead {
+.about-head,.subhead {
     color: red; /* Spider-Man: Miles Morales red */
 }
 
@@ -475,10 +474,12 @@ h1,.subhead {
 p {
     line-height: 1.6;
     color: white;
+    font-family: 'Barlow', sans-serif;
+    font-size: large;
 }
 
 /* Styling specific to the Spider-Man: Miles Morales theme */
-h1::after {
+.about-head::after {
     content: '🕷️'; /* Spider emoji */
     margin-left: 10px;
     font-size: 1.5em;
@@ -488,6 +489,7 @@ h1::after {
     content: '👟'; /* Running shoe emoji */
     margin-right: 10px;
 }
+
 
 
 
