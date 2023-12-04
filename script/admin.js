@@ -60,7 +60,7 @@ window.onload= function unity(){
        console.log(item);
        console.log(index);
        return `
-    
+  
                <tr>
                <td class ="text-black">${index + 1}</td>
                <td class ="text-black">${item.brand}</td>
