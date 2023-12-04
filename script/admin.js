@@ -25,24 +25,24 @@ let shoeItem4 = new Shoe('Nike',"jordan 4",1200)
 
 
 let adidas =  new Shoe('adidas','spiderman miles morales',1500,'https://i.postimg.cc/sXcLD2v4/spider-man-2-adidas-shoes-ign-2023-preorder-order-where-to-buy-1696341802109.png')
-let adidas2 = new Shoe('adidas','superstar',1500)
-let adidas3 = new Shoe('adidas','high top',1500)
-let adidas4 = new Shoe('adidas','sport',1500)
+let adidas2 = new Shoe('adidas','superstar',600)
+let adidas3 = new Shoe('adidas','high top',800)
+let adidas4 = new Shoe('adidas','sport',1100)
 
 let puma = new  Shoe('puma','white and green',900)
-let puma2 = new Shoe('puma','green and black',900)
-let puma3 = new Shoe('puma','limited edition',900)
-let puma4 = new Shoe('puma','black and white',900)
+let puma2 = new Shoe('puma','green and black',700)
+let puma3 = new Shoe('puma','limited edition',1200)
+let puma4 = new Shoe('puma','black and white',1000)
 
-let converse =  new Shoe('converse','high-top',1000)
-let converse2 = new Shoe('converse','low-top',1000)
+let converse =  new Shoe('converse','high-top',550)
+let converse2 = new Shoe('converse','low-top',600)
 let converse3 = new Shoe('converse','limited edition high-top',1000)
-let converse4 = new Shoe('converse','limited edition high-top',1000)
+let converse4 = new Shoe('converse','limited edition high-top',1200)
 
 let vans =  new Shoe('vans','low-top',800)
-let vans2 = new Shoe('vans','high-top',800)
-let vans3 = new Shoe('vans','sliders',800)
-let vans4=  new Shoe('vans','limited edition high-top',800)
+let vans2 = new Shoe('vans','high-top',900)
+let vans3 = new Shoe('vans','sliders',1500)
+let vans4=  new Shoe('vans','limited edition high-top',2000)
 
 //fun set,get
 
