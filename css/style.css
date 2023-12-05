@@ -525,7 +525,7 @@ p {
 }
 
 
-input{
+#input{
   margin-top: 1%;
   top: 0;
   padding: .2%;
@@ -536,13 +536,13 @@ input{
   
 }
 
-input:focus {
+#input:focus {
   outline: none;
   border-color: tomato;
   box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
 }
 
-input::placeholder{
+#input::placeholder{
   color: red;
   font-style: italic;
 }
@@ -614,3 +614,11 @@ input::placeholder{
 
 
 /* admin */
+
+
+
+/* contact */
+
+
+
+/* contact */
