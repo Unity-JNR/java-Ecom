@@ -21,7 +21,9 @@ function addToPage(product) {
 // addToPage(products)
 if(products.length === 0){
     main.innerHTML = `<div class="spinner-border text-danger" role="status">
-    <span class="visually-hidden">Loading...</span>`
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  `
 } else {
     addToPage(products)
 }
@@ -95,3 +97,6 @@ document.getElementById('nikeLink').addEventListener('click', function() {
 document.getElementById('vanLink').addEventListener('click', function() {
     showShoes('vans');
 });
+
+
+localStorage.setItem('bought',JSON.stringify(purchased))
