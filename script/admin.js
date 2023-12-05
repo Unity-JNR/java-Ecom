@@ -67,8 +67,8 @@ window.onload= function unity(){
                <td class ="text-white">${item.description}</td>
                <td class ="text-white">R${item.price}</td>
                <td class ="text-white"><img src="${item.url}" style="width: 100px; height: 100px;"></td>
-               <td><button class="btn btn-primary" value =${index} data-edit>edit</button></td>
-               <td><button class="btn btn-primary" value =${index} data-delete class= "delete">delete</button></td>
+               <td><button class="btn btn-primary edit" value =${index} data-edit>edit</button></td>
+               <td><button class="btn btn-primary delete" value =${index} data-delete>delete</button></td>
                </tr>
     
        `
@@ -76,9 +76,17 @@ window.onload= function unity(){
     table.innerHTML =products.join('')
 }
 
-/*
+function remove(position) {
+    shoes.splice(position,1)
+    //nested function
+    setAndGet()
+    //nested function
+    window.onload()
+ }
 
+table.addEventListener('click', function(event) {
+    if (event.target.classList.contains('delete')) {
+        remove(event.target.value);
+    }
+});
 
-
-
-*/
