@@ -591,15 +591,18 @@ p {
 }
 
 #select {
-  color: black; /* Default text color */
-  background-color: white; /* Default background color */
+  color: white; /* Default text color */
+  background-image: linear-gradient(to right,red,blue) ; /* Default background color */
   border: 1px solid black; /* Default border color */
   padding: .2%;
+  border: none;
+  outline: none;
+
 }
 
 #select option {
   color: red; /* Text color for options */
-  background-color: transparent; 
+  background-color: black; 
 }
 
 
