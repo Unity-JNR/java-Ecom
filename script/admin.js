@@ -57,8 +57,6 @@ function setAndGet(){
 let table = document.querySelector('table')
 window.onload= function unity(){
     let products = shoes.map((item,index) => {
-       console.log(item);
-       console.log(index);
        return `
   
                <tr>
@@ -88,5 +86,112 @@ table.addEventListener('click', function(event) {
     if (event.target.classList.contains('delete')) {
         remove(event.target.value);
     }
+});
+
+document.addEventListener('DOMContentLoaded',function(){
+
+    document.getElementById('add').addEventListener('click', function (event) {
+        // Get form input elements
+        let item = document.getElementById('item');
+        let img = document.getElementById('img');
+        let des = document.getElementById('des');
+        let price = document.getElementById('price');
+        let result = document.getElementById('result');
+    
+        // Clear previous results
+        result.innerHTML = "";
+    
+        // Prevent the default form submission
+        event.preventDefault();
+    
+        // Validate input fields
+        if (validateInput(item, img, des, price)) {
+            // Create a new Shoe object and push it to the shoes array
+            shoes.push(new Shoe(
+                item.value,
+                des.value,
+                parseFloat(price.value),
+                img.value
+            ));
+    
+            // Clear input fields
+            item.value = '';
+            img.value = '';
+            des.value = '';
+            price.value = '';
+    
+            // Update storage and display
+            setAndGet();
+            window.onload();
+        }
+    });
+    
+    // Function to validate input fields
+    function validateInput(item, img, des, price) {
+        // Check if any of the fields are empty
+        if (item.value === '' || img.value === '' || des.value === '' || price.value === '') {
+            alert('Please fill in all fields to add a new product!');
+            return false;
+        }
+        return true;
+    }
+    
+})
+
+function handleEditClick(index) {
+    // Populate modal fields with current data
+    let editBrandInput = document.getElementById('editBrand');
+    let editDescriptionInput = document.getElementById('editDescription');
+    let editPriceInput = document.getElementById('editPrice');
+    let editURLInput = document.getElementById('editURL');
+
+    editBrandInput.value = shoes[index].brand || '';
+    editDescriptionInput.value = shoes[index].description || '';
+    editPriceInput.value = shoes[index].price || '';
+    editURLInput.value = shoes[index].url || '';
+
+    // Show the edit modal
+    document.getElementById('editModal').style.display = 'block';
+
+    // Store the index in a data attribute for later use
+    document.getElementById('editModal').setAttribute('data-index', index);
+}
+
+// Add this function to close the edit modal
+function closeEditModal() {
+    document.getElementById('editModal').style.display = 'none';
+}
+
+// Add this function to save changes when the "Save changes" button is clicked
+function saveChanges() {
+    // Retrieve values from modal fields
+    let editedBrand = document.getElementById('editBrand').value.trim();
+    let editedDescription = document.getElementById('editDescription').value.trim();
+    let editedPrice = document.getElementById('editPrice').value.trim();
+    let editedURL = document.getElementById('editURL').value.trim();
+
+    // Retrieve the index from the data attribute
+    let index = document.getElementById('editModal').getAttribute('data-index');
+
+    // Update data in your array
+    shoes[index].brand = editedBrand;
+    shoes[index].description = editedDescription;
+    shoes[index].price = editedPrice;
+    shoes[index].url = editedURL;
+
+    // Close the modal
+    closeEditModal();
+
+    // Update the table or do any other necessary actions
+    setAndGet();
+    window.onload();
+}
+
+table.addEventListener('click', function(event) {
+    if (event.target.classList.contains('edit')) {
+        handleEditClick(event.target.value);
+    }
+    setAndGet();
+    
 });
 

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
     
 </head>
 <body>
@@ -51,6 +51,43 @@
        <table class="table table-dark table-bordered">
        
         </table>
+        <div class="mb-3">
+          <input type="text" id="item" class="form-control adding" placeholder="Product Name" >
+      </div>
+      <div class="mb-3">
+          <input type="text" id="img" class="form-control adding" placeholder="Image URL" >
+      </div>
+      <div class="mb-3">
+          <input type="text" id="des" class="form-control adding" placeholder="Product Description">
+      </div>
+      <div class="mb-3">
+          <input type="number" id="price" class="form-control adding" placeholder="Product Price">
+      </div>
+      <button id="add" class="btn " >Add Product</button>
+      
+      <div id="result"></div>
+
+        <!-- Add this HTML for the edit modal -->
+<div id="editModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeEditModal()">&times;</span>
+    <h2 id="h">Edit Product</h2>
+    <label for="editBrand" class="label">Brand:</label>
+    <input type="text" id="editBrand"  class="f">
+
+    <label for="editDescription" class="label">Description:</label>
+    <input type="text" id="editDescription" class="f">
+
+    <label for="editPrice" class="label">Price:</label>
+    <input type="text" id="editPrice"  class="f">
+
+    <label for="editURL" class="label">Image URL:</label>
+    <input type="text" id="editURL"  class="f">
+
+    <button class="btn" id="savebtn" onclick="saveChanges()">Save changes</button>
+  </div>
+</div>
+
       </main>
 
       <footer class="py-3 my-4">
