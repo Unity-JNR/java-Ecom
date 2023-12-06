@@ -1,4 +1,4 @@
-let purchased = []
+    let purchased = []
 let products = JSON.parse(localStorage.getItem('storage'))
 let main = document.querySelector('main')
 
@@ -132,5 +132,16 @@ document.getElementById('vanLink').addEventListener('click', function() {
 });
 
 
-localStorage.setItem('bought',JSON.stringify(purchased))
+
+function addToCart(index) {
+    purchased.push(products[index])
+    localStorage.setItem('bought',JSON.stringify(purchased))
+    
+}
+
+main.addEventListener('click',function name(event) {
+    if (event.target.hasAttribute('data-add')) {
+        addToCart(event.target.value)
+    }
+})
 
