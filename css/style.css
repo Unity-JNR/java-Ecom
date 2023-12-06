@@ -613,8 +613,80 @@ p {
 
 /* admin  */
 
+#editModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(255, 0, 0, 0.4); /* Red background */
+  padding-top: 60px;
+}
 
+.modal-content {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #00f; /* Blue border */
+  width: 80%;
+}
 
+.close {
+  color: red; /* White text */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fffeff; /* Blue text on hover/focus */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#h {
+  color: #fff
+  ; /* Blue heading text */
+}
+
+.label {
+  color: #fff; /* White label text */
+}
+
+.f {
+  background-color: #fff; /* Blue input background */
+  color: #000; /* Black input text */
+}
+
+#savebtn {
+  background-color: red ; /* White button background */
+  color: #fff ; /* Blue button text */
+  border: 1px solid white; /* Blue button border */
+  padding: 10px;
+  cursor: pointer;
+}
+
+#savebtn:hover {
+  background-color: black; /* Blue button background on hover */
+  color: #fff; /* White button text on hover */
+}
+
+.adding{
+  color: black; 
+  background-color: white; 
+  border: 2px solid red;
+}
+
+#add{
+  background-image: linear-gradient(to right,red,blue);
+   border: 2px solid white;
+   color: #fffeff;
+}
 
 /* admin */
 

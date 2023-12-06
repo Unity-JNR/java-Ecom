@@ -14,7 +14,7 @@ function addToPage(product) {
          <img class="image" src="${item.url}" alt="${item.brand}">
          <h2 class="h2">${item.brand}</h2>
          <p class="p">${item.description}</p>
-         <p class="p">R${item.price.toFixed(2)}</p>
+         <p class="p">R${item.price}</p>
          <button class="cart" value="${index}" data-add>Add to Cart</button>
      </div>
     
