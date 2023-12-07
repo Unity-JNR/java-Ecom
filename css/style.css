@@ -688,6 +688,17 @@ p {
    color: #fffeff;
 }
 
+#addmodal{
+  background-image: linear-gradient(to right,red,blue);
+   border: 2px solid white;
+   color: #fffeff;
+}
+
+#close{
+  background-image: linear-gradient(to left,red,blue);
+   border: 2px solid white;
+   color: #fffeff;
+}
 /* admin */
 
 
