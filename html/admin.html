@@ -50,19 +50,41 @@
        <table class="table table-dark table-bordered">
        
         </table>
-        <div class="mb-3">
-          <input type="text" id="item" class="form-control adding" placeholder="Product Name" >
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" id="addmodal" data-bs-toggle="modal" data-bs-target="#modal">
+  add product
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modal">Add Product</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="mb-3">
+                  <input type="text" id="item" class="form-control adding" placeholder="Product Name">
+              </div>
+              <div class="mb-3">
+                  <input type="text" id="img" class="form-control adding" placeholder="Image URL">
+              </div>
+              <div class="mb-3">
+                  <input type="text" id="des" class="form-control adding" placeholder="Product Description">
+              </div>
+              <div class="mb-3">
+                  <input type="number" id="price" class="form-control adding" placeholder="Product Price">
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" id="close" data-bs-dismiss="modal">Close</button>
+              <button id="add" class="btn " >Add Product</button>
+          </div>
       </div>
-      <div class="mb-3">
-          <input type="text" id="img" class="form-control adding" placeholder="Image URL" >
-      </div>
-      <div class="mb-3">
-          <input type="text" id="des" class="form-control adding" placeholder="Product Description">
-      </div>
-      <div class="mb-3">
-          <input type="number" id="price" class="form-control adding" placeholder="Product Price">
-      </div>
-      <button id="add" class="btn " >Add Product</button>
+  </div>
+</div>
+      <!-- <button id="add" class="btn " >Add Product</button> -->
       
       <div id="result"></div>
 
