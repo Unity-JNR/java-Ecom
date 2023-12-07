@@ -26,9 +26,11 @@ function addToPage(product) {
 
 // addToPage(products)
 if(products.length === 0){
-    main.innerHTML = `<div class="spinner-border text-danger" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div>
+    main.innerHTML = `<div id="cen">
+            <div class="spinner-border text-danger" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
   `
 } else {
     addToPage(products)
