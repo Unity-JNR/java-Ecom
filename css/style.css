@@ -794,7 +794,7 @@ textarea[name="message"]{
   border-radius: 5px;
   padding: 5px;
 }
-button[type="submit"]{
+#sub{
   box-shadow: 3px 3px 3px rgb(20, 20, 20);
   border: 1px solid #fffeff;
   border-radius: 5px;
