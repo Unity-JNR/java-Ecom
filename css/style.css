@@ -692,9 +692,24 @@ p {
   background-image: linear-gradient(to right,red,blue);
    border: 2px solid white;
    color: #fffeff;
+   margin-left: 20px;
 }
 
 #close{
+  background-image: linear-gradient(to left,red,blue);
+   border: 2px solid white;
+   color: #fffeff;
+}
+
+#cen{
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+  align-items: center;
+}
+
+#sorting{
+  margin-left: 20px;
   background-image: linear-gradient(to left,red,blue);
    border: 2px solid white;
    color: #fffeff;
