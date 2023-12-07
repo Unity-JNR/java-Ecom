@@ -56,22 +56,33 @@ function setAndGet(){
 
 let table = document.querySelector('table')
 window.onload= function unity(){
-    let products = shoes.map((item,index) => {
-       return `
-  
-               <tr>
-               <td class ="text-white">${index + 1}</td>
-               <td class ="text-white">${item.brand}</td>
-               <td class ="text-white">${item.description}</td>
-               <td class ="text-white">R${item.price}</td>
-               <td class ="text-white"><img src="${item.url}" style="width: 100px; height: 100px;"></td>
-               <td><button class="btn btn-primary edit" value =${index} data-edit>edit</button></td>
-               <td><button class="btn btn-primary delete" value =${index} data-delete>delete</button></td>
-               </tr>
-    
-       `
-    })
-    table.innerHTML =products.join('')
+    if(shoes.length === 0) {
+        table.innerHTML = `
+         <div id="cen">
+          <div class="spinner-border text-danger " role="status">
+            <span class="visually-hidden">Loading...</span>
+           </div>
+        </div>
+      `
+    }else{
+
+        let products = shoes.map((item,index) => {
+            return `
+            
+            <tr>
+            <td class ="text-white">${index + 1}</td>
+            <td class ="text-white">${item.brand}</td>
+            <td class ="text-white">${item.description}</td>
+            <td class ="text-white">R${item.price}</td>
+            <td class ="text-white"><img src="${item.url}" style="width: 100px; height: 100px;"></td>
+            <td><button class="btn btn-primary edit" value =${index} data-edit>edit</button></td>
+            <td><button class="btn btn-primary delete" value =${index} data-delete>delete</button></td>
+            </tr>
+            
+            `
+        })
+        table.innerHTML =products.join('')
+    }
 }
 
 function remove(position) {
@@ -195,3 +206,17 @@ table.addEventListener('click', function(event) {
     
 });
 
+let sorting = document.querySelector("#sorting");
+
+sorting.addEventListener("click", (event) => {
+    event.preventDefault();
+    shoes = shoes.sort((a, b) => {
+      if (a.price < b.price) {
+        return -1;
+      } else {
+        return 1;
+      }
+    
+    });
+    window.onload();
+  });
