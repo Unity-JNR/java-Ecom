@@ -97,7 +97,7 @@ function showAllSections() {
 }
 
 /*
-This code defines a function, showSelectedBrandSections, that displays specific sections of a shoe collection based on the selected brand. When the page loads, it initially shows all shoe sections. Each brand link, such as "Adidas" or "Nike," has a click event listener that hides all sections, then shows the relevant sections for the clicked brand,*/ 
+This code defines a function, showSelectedBrandSections, that displays specific sections of a shoe collection based on the selected brand. When the page loads, it initially shows all shoe sections. Each brand link, such as "Adidas" or "Nike," has a click event listener that hides all sections, then shows the relevant sections for the clicked brand,*/
 function showSelectedBrandSections(brand) {
   let selectedBrandSections = document.querySelectorAll(
     '.shoe-section[data-brand="' + brand + '"]'
@@ -112,31 +112,57 @@ window.onload = function () {
   showAllSections();
 };
 
-// Event listeners for brand links
+// Event listener for the "allShoesLink" element
 document.getElementById("allShoesLink").addEventListener("click", function () {
+
+  // Hide all sections on the page
   hideAllSections();
+
+  // Show all sections related to shoes
   showAllSections();
+
+  // Display all shoes, regardless of brand
   showShoes("all");
 });
 
+// Event listener for the "adidasLink" element
 document.getElementById("adidasLink").addEventListener("click", function () {
+
+  // Hide all sections on the page
   hideAllSections();
+
+  // Display shoes with the brand "Adidas"
   showShoes("adidas");
 });
 
+// Event listener for the "converseLink" element
 document.getElementById("converseLink").addEventListener("click", function () {
+
+  // Display shoes with the brand "Converse"
   showShoes("converse");
 });
 
+// Event listener for the "pumaLink" element
 document.getElementById("pumaLink").addEventListener("click", function () {
+
+  // Display shoes with the brand "Puma"
   showShoes("puma");
 });
+
+// Event listener for the "nikeLink" element
 document.getElementById("nikeLink").addEventListener("click", function () {
+
+  // Display shoes with the brand "Nike"
   showShoes("Nike");
 });
+
+// Event listener for the "vanLink" element
 document.getElementById("vanLink").addEventListener("click", function () {
+
+  // Display shoes with the brand "Vans"
   showShoes("vans");
 });
+
 
 /*
 
