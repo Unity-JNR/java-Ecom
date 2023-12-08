@@ -1,7 +1,8 @@
+//declared each slide as a variable in order for it to be used
 let slideOne = document.getElementById("slide-1");
 let slideTwo = document.getElementById("slide-2");
 let slideThree = document.getElementById("slide-3");
-
+// the info are the information that appears on the carousel
 let infoOne = document.getElementById("info-1");
 let infoTwo = document.getElementById("info-2");
 let infoThree = document.getElementById("info-3");
@@ -13,9 +14,14 @@ let spot3 = document.getElementById("spot-3");
 let currentSlide = 1;
 
 let x = true;
-
+//this will be used for the timebar before it switches to the next slide
 let timeBar = document.getElementById("time-bar");
-//function will run when next is clicked on html
+/*
+
+The specified JavaScript function is configured to run in response to a user-initiated event, namely, clicking on an HTML element that is identified as the "next" button on the page. 
+
+
+*/
 function switchToNext() {
   timeBar.classList.remove("bar-anim");
   timeBar.classList.add("bar-anim");
@@ -65,7 +71,12 @@ function switchToNext() {
     return;
   }
 }
-// function will run when prev is pressed on html
+/*
+
+The specified JavaScript function is configured to run in response to a user-initiated event, namely, clicking on an HTML element that is identified as the "prev" button on the page.
+
+
+*/
 function switchToPrev() {
   // goes from slide 1 to 3
   if (currentSlide == 1) {

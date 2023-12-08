@@ -1,4 +1,5 @@
 let purchased = [];
+// gets your  localstorage you created in admin
 let products = JSON.parse(localStorage.getItem("storage"));
 //main is used to call the tag so u can display the items in there
 let main = document.querySelector("main");
@@ -28,7 +29,7 @@ function addToPage(product) {
 }
 
 // addToPage(products)
-//if the products is empty a spinner will appear
+//if the products page is empty a spinner will appear
 if (products.length === 0) {
   main.innerHTML = `<div id="cen">
             <div class="spinner-border text-danger" role="status">
@@ -95,7 +96,8 @@ function showAllSections() {
   });
 }
 
-// Function to show sections of the selected brand
+/*
+This code defines a function, showSelectedBrandSections, that displays specific sections of a shoe collection based on the selected brand. When the page loads, it initially shows all shoe sections. Each brand link, such as "Adidas" or "Nike," has a click event listener that hides all sections, then shows the relevant sections for the clicked brand,*/ 
 function showSelectedBrandSections(brand) {
   let selectedBrandSections = document.querySelectorAll(
     '.shoe-section[data-brand="' + brand + '"]'
@@ -107,7 +109,7 @@ function showSelectedBrandSections(brand) {
 
 // Initialize display when the page loads
 window.onload = function () {
-  showAllSections(); 
+  showAllSections();
 };
 
 // Event listeners for brand links
@@ -136,12 +138,24 @@ document.getElementById("vanLink").addEventListener("click", function () {
   showShoes("vans");
 });
 
-// function to add items to the cart in localstorage
+/*
+
+
+This function, addToCart, adds a product from the 'products' array to the 'purchased' array at the specified 'index' and then stores the updated 'purchased' array in the browser's local storage as a JSON string. Essentially, it simulates adding items to an online shopping cart and ensures the cart contents persist even if the user refreshes the page.
+
+
+
+*/
 function addToCart(index) {
   purchased.push(products[index]);
   localStorage.setItem("bought", JSON.stringify(purchased));
 }
 
+/*
+
+This code makes it so when we click something on the page called "main," it checks if the thing we clicked has a special tag called "data-add." If it does, it tells the computer to add that thing to the shopping cart.
+
+*/
 main.addEventListener("click", function name(event) {
   if (event.target.hasAttribute("data-add")) {
     addToCart(event.target.value);

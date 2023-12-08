@@ -1,3 +1,4 @@
+// gets items u added to the cart from product page in localstorage
 let check = JSON.parse(localStorage.getItem("bought")) || [];
 
 // Remove duplicates based on the 'description' property
@@ -9,7 +10,7 @@ let unique = check.filter(
 let ul = document.querySelector(".cart");
 
 if (unique.length === 0) {
-    //if array is empty display spinner
+  //if array is empty display spinner
   ul.innerHTML = `
         <div id="cen">
             <div class="spinner-border text-danger" role="status">
@@ -19,7 +20,7 @@ if (unique.length === 0) {
 } else {
   ul.innerHTML += unique
     .map((item, index) => {
-        // display items into a list which is your cart
+      // display items into a list which is your cart
       return `
             <li class="list-group-item d-flex justify-content-between lh-sm">
                 <div>
@@ -46,18 +47,18 @@ function calculateTotalAmount() {
     }, 0)
     .toFixed(2);
 }
-// function used to get the quanity 
+// function used to get the quanity of items
 function getQuantityInputValue(index) {
   const quantityInput = document.querySelector(
     `.quantity-input[data-index="${index}"]`
   );
   return parseInt(quantityInput.value, 10) || 0;
 }
-//function takes the itemprice and number of quantity and times it together
+//function takes the item price and number of quantity and times it together
 function calculateItemTotalPrice(itemPrice, quantity) {
   return itemPrice * quantity;
 }
-//function used to display the total amount 
+//function used to display the total amount
 function updateTotalAmountDisplay() {
   const totalAmount = calculateTotalAmount();
   totalAmountDisplay.textContent = `Total Amount: R${totalAmount}`;
@@ -69,7 +70,7 @@ ul.addEventListener("input", function (event) {
     updateTotalAmountDisplay();
   }
 });
-
+// alert will show u how many quantitys u added
 function handleQuantityChange(index, quantity) {
   // alert(`Quantity changed for item at index ${index} to ${quantity}`);
 }
@@ -83,9 +84,10 @@ function clear() {
   totalAmountDisplay.innerHTML = "";
   location.reload();
 }
-// used to check if form checkout is  not empty
+/*
+This JavaScript code attaches a function to a form's submission event. It prevents the default form submission, checks if the form is valid, and either shows a "Thank you" alert and clears the form if valid, or alerts the user to fill in required fields if not valid. */
+
 document.addEventListener("DOMContentLoaded", function () {
-  
   let form = document.querySelector("form");
 
   form.addEventListener("submit", function (event) {
@@ -96,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (form.checkValidity()) {
       // If the form is valid, show the alert and clear the form
       alert("Thank you for your purchase");
-      clearForm(); 
+      clearForm();
       clear();
     } else {
       // If the form is not valid, you can optionally provide feedback to the user
@@ -116,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Auto set the input spinner to 1 when adding an item
 document.addEventListener("DOMContentLoaded", function () {
-  unique.forEach((item, index) => {
+  unique.forEach((item,index) => {
     const quantityInput = document.querySelector(
       `.quantity-input[data-index="${index}"]`
     );
