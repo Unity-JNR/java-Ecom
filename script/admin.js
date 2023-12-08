@@ -217,28 +217,29 @@ table.addEventListener("click", function (event) {
 
 // used so when item is added it will be displayed
 document.addEventListener("DOMContentLoaded", function () {
+  // Attach a click event listener to the element with the ID "add"
   document.getElementById("add").addEventListener("click", function (event) {
-    // Get form input elements
+    // Get references to input elements in the form with specific IDs
     let item = document.getElementById("item");
     let img = document.getElementById("img");
     let des = document.getElementById("des");
     let price = document.getElementById("price");
     let result = document.getElementById("result");
 
-    // Clear previous results
+    // Clear any previous results displayed in the "result" elements
     result.innerHTML = "";
 
-    // Prevent the default form submission
+    // Prevent the default form submission behavior
     event.preventDefault();
 
-    // Validate input fields
+     // Validate input fields using the validateInput function
     if (validateInput(item, img, des, price)) {
-      // Create a new Shoe object and push it to the shoes array
+       // Create a new Shoe object and add it to the "shoes" array
       shoes.push(
         new Shoe(item.value, des.value, parseFloat(price.value), img.value)
       );
 
-      // Clear input fields
+      // Clear input fields after successfully adding a new Shoe
       item.value = "";
       img.value = "";
       des.value = "";
@@ -265,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return true;
   }
 });
-//function to edit the items 
+//function to edit the items on the table
 function handleEditClick(index) {
   // Populate modal fields with current data
   let editBrandInput = document.getElementById("editBrand");
@@ -285,12 +286,12 @@ function handleEditClick(index) {
   document.getElementById("editModal").setAttribute("data-index", index);
 }
 
-// Add this function to close the edit modal
+//  this function is used  to close the edit modal
 function closeEditModal() {
   document.getElementById("editModal").style.display = "none";
 }
 
-// Add this function to save changes when the "Save changes" button is clicked
+//  this function is used  to  save the changes when the "Save changes" button is clicked
 function saveChanges() {
   // Retrieve values from modal fields
   let editedBrand = document.getElementById("editBrand").value.trim();
@@ -323,7 +324,8 @@ table.addEventListener("click", function (event) {
   }
   setAndGet();
 });
-//sorts admin from low to high
+
+//sorts admin prices from low to high
 let sorting = document.querySelector("#sorting");
 
 sorting.addEventListener("click", (event) => {
