@@ -1,87 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-     <link rel="stylesheet" href="/css/style.css">
-     <link rel="shortcut icon" href="https://i.postimg.cc/wBXs4Q6M/icons8-u-48.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="shortcut icon" href="https://i.postimg.cc/wBXs4Q6M/icons8-u-48.png" type="image/x-icon">
 </head>
+
 <body>
-  
+
   <header>
-  <nav class="navbar navbar-expand-lg bg-danger  border-bottom" data-bs-theme="light">
-    <div class="container-fluid">
-      <a class="navbar-brand d-md-none text-white" href="#">
-        <svg class="bi" width="24" height="24"></svg>
-        Sole Haven
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="#offcanvas" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end bg-danger" tabindex="-1" id="offcanvas" aria-labelledby="#offcanvasLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title text-white" id="offcanvasLabel">Sole Haven</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <nav class="navbar navbar-expand-lg bg-danger  border-bottom" data-bs-theme="light">
+      <div class="container-fluid">
+        <a class="navbar-brand d-md-none text-white" href="#">
+          <svg class="bi" width="24" height="24"></svg>
+          Sole Haven
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+          aria-controls="#offcanvas" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end bg-danger" tabindex="-1" id="offcanvas" aria-labelledby="#offcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white" id="offcanvasLabel">Sole Haven</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+
+            <ul class="navbar-nav flex-grow-1 justify-content-between">
+              <li class="nav-item"><a class="nav-link text-white fw-bold" href="#">
+                  Sole Haven
+                </a></li>
+              <li class="nav-item"><a class="nav-link text-white " href="/html/about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link text-mute  disabled" href="#">product</a></li>
+
+              <div class="dropdown">
+                <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  shoes
+                </button>
+                <ul class="dropdown-menu bg-danger">
+                  <li class="nav-item"><a class="nav-link text-white filter-link" id="allShoesLink" href="#">All</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link text-white filter-link" id="nikeLink" href="#">Nike</a></li>
+                  <li class="nav-item"><a class="nav-link text-white filter-link" id="pumaLink" href="#">Puma</a></li>
+                  <li class="nav-item"><a class="nav-link text-white filter-link" id="converseLink"
+                      href="#">Converse</a></li>
+                  <li class="nav-item"><a class="nav-link text-white filter-link" id="vanLink" href="#">Vans</a></li>
+                  <li class="nav-item"><a class="nav-link text-white filter-link" id="adidasLink" href="#">Adidas</a>
+                  </li>
+                </ul>
+              </div>
+              <li class="nav-item"><a class="nav-link text-white  " href="/html/admin.html">admin</a></li>
+              <li class="nav-item"><a class="nav-link text-white  " href="/html/contact.html">contact</a></li>
+
+              <li class="nav-item"><a class="nav-link text-white" href="/html/checkout.html">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </a></li>
+            </ul>
+          </div>
         </div>
-        <div class="offcanvas-body">
+      </div>
+    </nav>
+  </header>
+  <div class="container-fluid">
+    <input type="text" placeholder="search..." id="input">
+    <select id="select">
+      <option value="sortby">sortby:</option>
+      <option value="least" id="sort">least</option>
+      <option value="high" id="sort">high</option>
+    </select>
 
-          <ul class="navbar-nav flex-grow-1 justify-content-between">
-            <li class="nav-item"><a class="nav-link text-white fw-bold" href="#">
-                Sole Haven
-            </a></li>
-            <li class="nav-item"><a class="nav-link text-white " href="/html/about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link text-mute  disabled" href="#">product</a></li>
-          
-            <div class="dropdown">
-              <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
-               shoes
-              </button>
-              <ul class="dropdown-menu bg-danger">
-                <li class="nav-item"><a class="nav-link text-white filter-link" id="allShoesLink" href="#">All</a></li>
-                <li class="nav-item"><a class="nav-link text-white filter-link" id="nikeLink" href="#">Nike</a></li>
-                <li class="nav-item"><a class="nav-link text-white filter-link" id="pumaLink" href="#">Puma</a></li>
-                <li class="nav-item"><a class="nav-link text-white filter-link" id="converseLink" href="#">Converse</a></li>
-                <li class="nav-item"><a class="nav-link text-white filter-link" id="vanLink" href="#">Vans</a></li>
-                <li class="nav-item"><a class="nav-link text-white filter-link" id="adidasLink" href="#">Adidas</a></li>
-              </ul>
-            </div>
-            <li class="nav-item"><a class="nav-link text-white  " href="/html/admin.html">admin</a></li>
-            <li class="nav-item"><a class="nav-link text-white  " href="/html/contact.html">contact</a></li>
-           
-            <li class="nav-item"><a class="nav-link text-white" href="/html/checkout.html">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            </a></li>
-           </ul>
-           </div>
-           </div>
-           </div>
-           </nav> 
-         </header>
-        <div class="container-fluid">
-         <input type="text" placeholder="search..." id="input">
-         <select id="select">
-          <option value="sortby">sortby:</option>
-           <option value="least" id="sort">least</option>
-           <option value="high" id="sort">high</option>
-        </select>
-
-        </div>
-         <main class="main">
-          
-   
-
-        </main>
-        
+  </div>
+  <main class="main">
 
 
-<footer class="py-3 my-4">
-  <p class="text-center text-white ">&copy; 2023 Unity Demas</p>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>   
-<script src="/script/product.js"></script>
+
+  </main>
+
+
+
+  <footer class="py-3 my-4">
+    <p class="text-center text-white ">&copy; 2023 Unity Demas</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+  <script src="/script/product.js"></script>
 
 </body>
+
 </html>
