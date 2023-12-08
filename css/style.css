@@ -378,7 +378,7 @@ button:focus {
     height: 8vw;
   }
 
-  body{
+  body {
     overflow-x: hidden;
   }
 }
@@ -395,7 +395,8 @@ button:focus {
   .carousel-sub-text {
     font-size: 2vw;
   }
-  body{
+
+  body {
     overflow-x: hidden;
   }
 }
@@ -412,7 +413,8 @@ button:focus {
   .carousel-sub-text {
     font-size: 20px;
   }
-  body{
+
+  body {
     overflow-x: hidden;
   }
 }
@@ -421,7 +423,8 @@ button:focus {
   .sdiv {
     height: 25vw;
   }
-  body{
+
+  body {
     overflow-x: hidden;
   }
 
@@ -442,7 +445,8 @@ button:focus {
   .information {
     width: calc(100% - 40px);
   }
-  body{
+
+  body {
     overflow-x: hidden;
   }
 }
@@ -903,10 +907,14 @@ textarea[name="message"] {
   box-shadow: 3px 3px 3px rgb(20, 20, 20);
   border: 1px solid #fffeff;
   border-radius: 5px;
-  background: blue;
+  background: darkcyan;
   color: white;
   width: 5rem;
   height: 2rem;
+}
+
+#conhead {
+  color: darkcyan;
 }
 
 @media screen and (max-width < 1080) {
