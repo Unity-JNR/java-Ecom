@@ -15,10 +15,11 @@ let currentSlide = 1;
 let x = true;
 
 let timeBar = document.getElementById("time-bar");
-
+//function will run when next is clicked on html
 function switchToNext() {
   timeBar.classList.remove("bar-anim");
   timeBar.classList.add("bar-anim");
+  //go from page 1 to 2
   if (currentSlide == 1) {
     slideOne.classList.add("out-left");
     infoOne.classList.add("out-fade-down");
@@ -32,6 +33,7 @@ function switchToNext() {
     currentSlide = 2;
     return;
   }
+  //page 2 to 3
   if (currentSlide == 2) {
     infoOne.classList.add("out-fade-down");
     infoTwo.classList.add("out-fade-down");
@@ -45,6 +47,7 @@ function switchToNext() {
     currentSlide = 3;
     return;
   }
+  // page 3 back to 1
   if (currentSlide == 3) {
     infoOne.classList.remove("out-fade-down");
     infoTwo.classList.add("out-fade-down");
@@ -62,7 +65,9 @@ function switchToNext() {
     return;
   }
 }
+// function will run when prev is pressed on html
 function switchToPrev() {
+  // goes from slide 1 to 3
   if (currentSlide == 1) {
     infoOne.classList.add("out-fade-down");
     infoTwo.classList.add("out-fade-down");
@@ -77,6 +82,7 @@ function switchToPrev() {
     currentSlide = 3;
     return;
   }
+  //goes from 3 to 2
   if (currentSlide == 3) {
     infoOne.classList.add("out-fade-down");
     infoTwo.classList.remove("out-fade-down");
@@ -91,6 +97,7 @@ function switchToPrev() {
     currentSlide = 2;
     return;
   }
+  //goes from 2 to 1
   if (currentSlide == 2) {
     infoOne.classList.remove("out-fade-down");
     infoTwo.classList.add("out-fade-down");
@@ -108,7 +115,7 @@ function switchToPrev() {
     return;
   }
 }
-
+// setting how long it should take to get to the next page
 window.setInterval(function () {
   switchToNext();
 }, 9000);
